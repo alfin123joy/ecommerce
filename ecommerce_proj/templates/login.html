@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: rgb(238, 179, 52);
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 320px;
+      padding: 20px;
+      background: rgb(235, 25, 25);
+      border-radius: 15px;
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.4);
+      transition: 0.3s;
+      text-align: center;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      border-radius: 25px;
+      border: none;
+      background: #043186;
+      outline: none;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+      box-shadow: 0 8px 12px 0 rgb(12, 1, 1);
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: rgb(1, 19, 24);
+    }
+
+    .text {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 0.5px solid rgb(0, 236, 63);
+      font-family: "Montserrat", sans-serif;
+      outline: none;
+    }
+
+    .wrapper {
+      text-align: center;
+    }
+
+    .reg {
+      font-size: x-small;
+    }
+
+    .p {
+      font-size: small;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="" method="POST">
+    {% csrf_token %}
+  <div class="container">
+    <h2>Welcome Back!</h2>
+    <br>
+    <div class="wrapper">
+      <p class="p">Username</p>
+      <input placeholder="Username..." type="text" name="user_name">
+      <br>
+      <p class="p">Password</p>
+      <input placeholder="Password..." type="password"  name="password1">
+      <br><br>
+      <button class="btn">Login</button><br>
+    </div>
+  </div>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info {
+    max-width: 400px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+ button{
+    background-color: rgb(221, 23, 23);
+ }
+    </style>
+</head>
+<body>
+
+    <header>
+        
+        <h1>Modern Furniture</h1>
+    </header>
+    
+    <section class="product-details">
+        <div class="product-image">
+            <img src={{view.image.url}} alt="Modern Coffee Table">
+        </div>
+        <div class="product-info">
+            <h2>Description</h2>
+               <p>{{view.des }}</p>
+
+            <h3>{{view.price}}</h3>
+            <a href="{% url 'cart' view.id %}">Add to Cart</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Furniture Emporium</p>
+    </footer>
+
+</body>
+</html>
